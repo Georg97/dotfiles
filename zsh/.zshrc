@@ -110,6 +110,7 @@ alias hyprc="cd ~/.config/hypr;nvim hyprland.conf"
 alias hxc="cd ~/.config/helix;nvim ."
 alias signal="flatpak run org.signal.Signal"
 alias k="kubectl"
+alias lgit="lazygit"
 
 toggleBuiltinMonitor() {
     if [[ ! $(command -v hyprctl) ]]; then
