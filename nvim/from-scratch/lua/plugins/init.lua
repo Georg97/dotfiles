@@ -9,6 +9,9 @@ return {
     end,
   },
   {
+    "neovim/nvim-lspconfig",
+  },
+  {
       "kdheepak/lazygit.nvim",
       cmd = {
         "LazyGit",
