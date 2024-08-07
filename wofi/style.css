@@ -1,77 +1,98 @@
-* {
-	nord0: #2e3440;
-	nord1: #3b4252;
-	nord2: #434c5e;
-	nord3: #4c566a;
+/* read more here: https://cloudninja.pw/docs/wofi.html */
+@define-color nord0       rgba(46, 52, 64, 1);
+@define-color nord1       rgba(59, 66, 82, 1);
+@define-color nord2       rgba(67, 76, 94, 1);
+@define-color nord3       rgba(76, 86, 106, 1);
+@define-color nord4       rgba(216, 222, 233, 1);
+@define-color nord5       rgba(229, 233, 240, 1);
+@define-color nord6       rgba(236, 239, 244, 1);
+@define-color nord7       rgba(143, 188, 187, 1);
+@define-color nord8       rgba(136, 192, 208, 1);
+@define-color nord9       rgba(129, 161, 193, 1);
+@define-color nord10      rgba(94, 129, 172, 1);
+@define-color nord11      rgba(191, 97, 106, 1);
+@define-color nord12      rgba(208, 135, 112, 1);
+@define-color nord13      rgba(235, 203, 139, 1);
+@define-color nord14      rgba(163, 190, 140, 1);
+@define-color nord15      rgba(180, 142, 173, 1);
+@define-color foreground  var(--nord9);
+@define-color backlight   rgba(204, 255, 238, 221);
 
-	nord4: #d8dee9;
-	nord5: #e5e9f0;
-	nord6: #eceff4;
-
-	nord7: #8fbcbb;
-	nord8: #88c0d0;
-	nord9: #81a1c1;
-	nord10: #5e81ac;
-	nord11: #bf616a;
-
-	nord12: #d08770;
-	nord13: #ebcb8b;
-	nord14: #a3be8c;
-	nord15: #b48ead;
-
-    foreground:  @nord9;
-    backlight:   #ccffeedd;
-    background-color:  transparent;
-
-    rose-background: #191724;
-    rose-background-transparent: rgba(25, 23, 36, 0.7);
-    rose-text: #e0def4;
-    rose-subtle: #908caa;
-    rose-subtle-transparent: rgba(144, 140, 170, 0.1);
-    rose-overlay: #393552;
-    rose-overlay-transparent: rgba(57, 53, 82, 0.6);
-    rose-love: #eb6f92;
-    
-    highlight:     underline bold #eceff4;
-
-    transparent: rgba(46,52,64,0);
-    /* transparent: #ff0000; */
+:root {
+    --n0      : #2e3440;
+    --n1      : #3b4252;
+    --n2      : #434c5e;
+    --n3      : #4c566a;
+    --n4      : #d8dee9;
+    --n5      : #e5e9f0;
+    --n6      : #eceff4;
+    --n7      : #8fbcbb;
+    --n8      : #88c0d0;
+    --n9      : #81a1c1;
+    --n10     : #5e81ac;
+    --n11     : #bf616a;
+    --n12     : #d08770;
+    --n13     : #ebcb8b;
+    --n14     : #a3be8c;
+    --n15     : #b48ead;
+    --fg : var(--n9);
+    --bl  : #ccffeeddb;
 }
+
 window {
-    margin: 5px;
-    border: 2px solid #FF0000;
-    background-color: #FFFFFF;
+    border: none;
+    background-color: transparent;
+    border-radius: 0.75rem;
 }
 
 #input {
+    --bg: #ff0000;
     margin: 5px;
-    border: 2px solid #8EC07C;
-    background-color: #282828;
+    padding: 0.5rem;
+    border-radius: 0;
+    border-top-left-radius: 0.65rem;
+    border-top-right-radius: 0.65rem;
+    border: none;
+    border-bottom: 2px solid @nord5;
+    background-color: rgba(46, 52, 64, 0.25); /* this is nord 0 with adjusted opacity*/
+    font-size: 4rem;
+    color: @nord10;
+    letter-spacing: 0.1rem;
 }
 
 #inner-box {
-    margin: 5px;
-    border: 2px solid #8EC07C;
-    background-color: #282828;
+    margin: 0;
+    border-radius: 12px;
+    border: none;
+    background-color: transparent;
 }
 
 #outer-box {
     margin: 5px;
-    border: 2px solid #8EC07C;
-    background-color: #282828;
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
 }
 
 #scroll {
     margin: 5px;
-    border: 2px solid #8EC07C;
-    background-color: #282828;
+    border: none;
+    background-color: transparent; /* this is nord 0 with adjusted opacity*/
 }
 
 #text {
     margin: 5px;
-    color: #EBDBB2;
+    color: @nord4;
+}
+
+#entry {
+    border-radius: 0.45rem;
+    transition: all 250ms;
+    font-size: 1rem;
 }
 
 #entry:selected {
-    background-color: #8EC07C;
+    font-size: 1.25rem;
+    font-weight: bold;
+    background-color: @nord10;
 }
