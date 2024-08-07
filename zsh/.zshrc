@@ -103,5 +103,26 @@ alias zshc="nvim ~/.zshrc"
 alias vimc="cd ~/.config/nvim;nvim ."
 alias fishc="cd ~/.config/fish;nvim ."
 alias i3c="cd ~/.config/i3;nvim ."
+alias hyprc="cd ~/.config/hypr;nvim hyprland.conf"
 alias hxc="cd ~/.config/helix;nvim ."
 alias signal="flatpak run org.signal.Signal"
+alias k="kubectl"
+
+toggleBuiltinMonitor() {
+    if [[ ! $(command -v hyprctl) ]]; then
+        echo "install hyprctl to use this toggle function"
+        return 1
+    else
+
+    fi
+
+    local monitor="eDP-1"
+    local hasMonitor=$(hyprctl monitors | grep "$monitor")
+
+    if [ $hasMonitor ]; then
+        hyprctl keyword monitor $monitor,disable
+    else
+        hyprctl keyword monitor $monitor,enable
+    fi
+}
+
