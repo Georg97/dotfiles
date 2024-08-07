@@ -1,0 +1,77 @@
+* {
+	nord0: #2e3440;
+	nord1: #3b4252;
+	nord2: #434c5e;
+	nord3: #4c566a;
+
+	nord4: #d8dee9;
+	nord5: #e5e9f0;
+	nord6: #eceff4;
+
+	nord7: #8fbcbb;
+	nord8: #88c0d0;
+	nord9: #81a1c1;
+	nord10: #5e81ac;
+	nord11: #bf616a;
+
+	nord12: #d08770;
+	nord13: #ebcb8b;
+	nord14: #a3be8c;
+	nord15: #b48ead;
+
+    foreground:  @nord9;
+    backlight:   #ccffeedd;
+    background-color:  transparent;
+
+    rose-background: #191724;
+    rose-background-transparent: rgba(25, 23, 36, 0.7);
+    rose-text: #e0def4;
+    rose-subtle: #908caa;
+    rose-subtle-transparent: rgba(144, 140, 170, 0.1);
+    rose-overlay: #393552;
+    rose-overlay-transparent: rgba(57, 53, 82, 0.6);
+    rose-love: #eb6f92;
+    
+    highlight:     underline bold #eceff4;
+
+    transparent: rgba(46,52,64,0);
+    /* transparent: #ff0000; */
+}
+window {
+    margin: 5px;
+    border: 2px solid #FF0000;
+    background-color: #FFFFFF;
+}
+
+#input {
+    margin: 5px;
+    border: 2px solid #8EC07C;
+    background-color: #282828;
+}
+
+#inner-box {
+    margin: 5px;
+    border: 2px solid #8EC07C;
+    background-color: #282828;
+}
+
+#outer-box {
+    margin: 5px;
+    border: 2px solid #8EC07C;
+    background-color: #282828;
+}
+
+#scroll {
+    margin: 5px;
+    border: 2px solid #8EC07C;
+    background-color: #282828;
+}
+
+#text {
+    margin: 5px;
+    color: #EBDBB2;
+}
+
+#entry:selected {
+    background-color: #8EC07C;
+}
