@@ -10,3 +10,4 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Explore)
 -- vim.keymap.set("n", "<leader><leader>", ":vnew | r!find . -regex .+.+<Left><Left>")
 -- vim.keymap.set("n", "<leader>o", "yy:<C-u>e <C-r>\"", {noremap = true})
 
+vim.keymap.set("n", "<leader>%", "ggVG")
