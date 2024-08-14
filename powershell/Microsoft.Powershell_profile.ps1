@@ -32,6 +32,7 @@ Set-Alias restart-komorebic RestartKomorebi
 
 # $Env:KOMOREBI_CONFIG_HOME = 'C:\Users\g.hirsch\.config\komorebi'
 $env:KUBE_EDITOR="nvim"
+$Env:KOMOREBI_CONFIG_HOME="C:\Users\g.hirsch\.config\komorebi"
 
 # Import the Chocolatey Profile that contains the necessary code to enable
 # tab-completions to function for `choco`.
