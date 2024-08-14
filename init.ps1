@@ -1,6 +1,12 @@
-.\powershell\init.ps1
-.\komorebi\init.ps1
-New-Item -Path $HOME\AppData\Local\nvim -ItemType SymbolicLink -Value .\nvim\from-scratch
-.\windows-terminal\init.ps1
-.\alacritty\init.ps1
-.\helix\init.ps1
+Push-Location .\powershell
+powershell -Command { .\init.ps1 }
+Pop-Location
+
+Push-Location .\komorebi
+powershell -Command { .\init.ps1 }
+Pop-Location
+
+powershell -Command { New-Item -Path $HOME\AppData\Local\nvim -ItemType SymbolicLink -Value .\nvim\from-scratch }
+#powershell -Command { .\windows-terminal\init.ps1 }
+#powershell -Command { .\alacritty\init.ps1 }
+#powershell -Command { .\helix\init.ps1 }
