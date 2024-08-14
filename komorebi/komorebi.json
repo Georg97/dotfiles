@@ -6,10 +6,10 @@
   "default_workspace_padding": 3,
   "default_container_padding": 3,
   "border": true,
-  "border_width": 1,
-  "border_offset": -1,
+  "border_width": 2,
+  "border_offset": 0,
   "border_colours": {
-    "single": "#42a5f5",
+    "single": "#ff3399",
     "stack": "#00a542",
     "monocle": "#ff3399",
     "unfocused": "#808080"
@@ -29,31 +29,35 @@
       "workspaces": [
         {
           "name": "I",
-          "layout": "BSP"
-        },
-        {
-          "name": "II",
-          "layout": "VerticalStack"
-        },
-        {
-          "name": "III",
-          "layout": "HorizontalStack"
-        },
-        {
-          "name": "IV",
-          "layout": "UltrawideVerticalStack"
-        },
-        {
-          "name": "V",
-          "layout": "Rows"
-        },
-        {
-          "name": "VI",
           "layout": "Grid"
         },
         {
+          "name": "II",
+          "layout": "Grid"
+        },
+        {
+          "name": "III",
+          "layout": "Grid"
+        },
+        {
+          "name": "IV",
+          "layout": "Grid"
+        },
+        {
+          "name": "V",
+          "layout": "UltrawideVerticalStack"
+        },
+        {
+          "name": "VI",
+          "layout": "UltrawideVerticalStack"
+        },
+        {
           "name": "VII",
-          "layout": "RightMainVerticalStack"
+          "layout": "UltrawideVerticalStack"
+        },
+        {
+          "name": "VIII",
+          "layout": "UltrawideVerticalStack"
         }
       ]
     }
