@@ -12,3 +12,5 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Explore)
 
 vim.keymap.set("n", "<leader>%", "ggVG")
 vim.keymap.set("n", "-", "@z")
+
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
