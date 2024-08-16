@@ -1,0 +1,8 @@
+[user]
+	name = Georg
+	email = 75206704+Georg97@users.noreply.github.com
+[alias]
+    tree = log --graph --decorate --pretty=oneline --abbrev-commit --all
+
+[init]
+    defaultBranch = main
