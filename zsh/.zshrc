@@ -98,8 +98,9 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 
-export PATH="$PATH:/home/georg/go/bin"
+export PATH="$PATH:~/go/bin"
 export PATH="$PATH:/opt/nvim-linux64/bin"
+export PATH="$PATH:~/.bin"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -132,3 +133,6 @@ toggleBuiltinMonitor() {
     fi
 }
 
+if [[ $(command -v Hyprland) && $(ps -e | grep Hyprland | wc -l) -le 0 ]]; then
+    Hyprland
+fi
