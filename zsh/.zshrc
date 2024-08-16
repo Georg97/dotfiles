@@ -133,6 +133,19 @@ toggleBuiltinMonitor() {
     fi
 }
 
+function gsar() {
+    dir=$1
+    search=$2
+    replace=$3
+
+    echo "going to replace all occurences of $2 in $1 with $3, are you sure ? (Press Enter to continue, ^C to cancel)"
+    read
+
+    # for the memories:
+    # find $dir -type f | while read file; do if [[ $(cat $file | grep $search | wc -l) -gt 0 ]]; then sed "s/$search/$replace/g" $file > $file; fi; done
+    grep -rl "$search" $dir | parallel -j 0 sed -i "s/$search/$replace/g" {}
+}
+
 if [[ $(command -v Hyprland) && $(ps -e | grep Hyprland | wc -l) -le 0 ]]; then
     Hyprland
 fi
