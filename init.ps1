@@ -15,5 +15,9 @@ Pop-Location
 Push-Location .\lazygit
 powershell -Command { .\init.ps1 }
 Pop-Location
+
+Push-Location .\git
+powershell -Command { .\init.ps1 }
+Pop-Location
 #powershell -Command { .\windows-terminal\init.ps1 }
 #powershell -Command { .\helix\init.ps1 }
