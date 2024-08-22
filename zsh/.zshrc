@@ -101,6 +101,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$PATH:$HOME/.bin"
+export PATH="$PATH:$HOME/.dotnet/tools"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
