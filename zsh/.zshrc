@@ -98,9 +98,9 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 
-export PATH="$PATH:~/go/bin"
+export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:/opt/nvim-linux64/bin"
-export PATH="$PATH:~/.bin"
+export PATH="$PATH:$HOME/.bin"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -111,9 +111,10 @@ alias fishc="cd ~/.config/fish;nvim ."
 alias i3c="cd ~/.config/i3;nvim ."
 alias hyprc="cd ~/.config/hypr;nvim hyprland.conf"
 alias hxc="cd ~/.config/helix;nvim ."
-alias signal="flatpak run org.signal.Signal"
+
 alias k="kubectl"
 alias lgit="lazygit"
+alias vim="nvim ."
 
 toggleBuiltinMonitor() {
     if [[ ! $(command -v hyprctl) ]]; then
