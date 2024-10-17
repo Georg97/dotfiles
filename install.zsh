@@ -6,4 +6,3 @@ ln -s $(pwd)/lazygit ~/.config/lazygit
 
 rm ~/.zshrc
 ln -s $(pwd)/zsh/.zshrc ~/.zshrc
-ln -s $(pwd)/zsh/themes/gtheme.zsh-theme ~/.oh-my-zsh/themes/gtheme.zsh-theme
