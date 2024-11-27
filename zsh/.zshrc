@@ -100,8 +100,12 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:/opt/nvim-linux64/bin"
-export PATH="$PATH:$HOME/.bin"
+export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:$HOME/.dotnet/tools"
+export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin"
+
+export KUBECONFIG="$HOME/.kube/config"
+export KUBECONFIG="$KUBECONFIG:$HOME/.kube/config-local"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -151,3 +155,7 @@ function gsar() {
 if [[ $(command -v Hyprland) && $(ps -e | grep Hyprland | wc -l) -le 0 ]]; then
     Hyprland
 fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
