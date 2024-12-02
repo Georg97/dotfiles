@@ -45,18 +45,22 @@
         },
         {
           "name": "V",
-          "layout": "UltrawideVerticalStack"
+          "layout": "Grid"
         },
         {
           "name": "VI",
-          "layout": "UltrawideVerticalStack"
+          "layout": "Grid"
         },
         {
           "name": "VII",
-          "layout": "UltrawideVerticalStack"
+          "layout": "Grid"
         },
         {
           "name": "VIII",
+          "layout": "Grid"
+        },
+        {
+          "name": "IX",
           "layout": "UltrawideVerticalStack"
         }
       ]

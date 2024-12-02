@@ -6,7 +6,7 @@ Komorebic(cmd) {
     RunWait(format("komorebic.exe {}", cmd), , "Hide")
 }
 
-!q::Komorebic("close")
+<#q::Komorebic("close")
 !m::Komorebic("minimize")
 
 ; Focus windows
