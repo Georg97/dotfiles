@@ -32,6 +32,7 @@ Set-Alias restart-komorebic RestartKomorebi
 
 # $Env:KOMOREBI_CONFIG_HOME = 'C:\Users\g.hirsch\.config\komorebi'
 $env:KUBE_EDITOR="nvim"
+$env:KUBECONFIG = "$HOME\.kube\config;$HOME\.kube\sunbound-dev.conf"
 $Env:KOMOREBI_CONFIG_HOME="$HOME\.config\komorebi"
 
 # Import the Chocolatey Profile that contains the necessary code to enable
