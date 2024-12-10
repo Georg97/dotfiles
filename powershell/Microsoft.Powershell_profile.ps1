@@ -52,3 +52,4 @@ if (Test-Path($ChocolateyProfile)) {
 #}
 
 
+cd $HOME\development
