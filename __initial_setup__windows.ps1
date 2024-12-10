@@ -7,9 +7,9 @@
 # - imagmagick
 # - winscp
 # - discord
+# - upnote
 
 # [optional]
-# - audacity
 # - gimp
 # - inkscape
 # - vncviewer
@@ -38,6 +38,7 @@ scoop install `
     main/opentofu `
     main/talosctl `
     main/terragrunt `
+    extras/audacity `
     extras/insomnia `
     extras/lazygit `
     extras/komorebi `
