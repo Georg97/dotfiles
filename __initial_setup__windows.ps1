@@ -8,6 +8,7 @@
 # - winscp
 # - discord
 # - upnote
+# - proton vpn
 
 # [optional]
 # - gimp
@@ -16,7 +17,6 @@
 
 winget install `
     Microsoft.PowerToys `
-    WinSCP.WinSCP `
     Microsoft.Powershell `
     OpenWhisperSystems.Signal `
     Brave.Brave `

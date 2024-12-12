@@ -51,5 +51,8 @@ if (Test-Path($ChocolateyProfile)) {
 #    $pwsh_executable
 #}
 
-
-cd $HOME\development
+#$startPath = "$HOME\development"
+#if (-not (Test-Path -Path $startPath)) {
+#    New-Item -Path $startPath -ItemType Directory
+#}
+#cd $HOME\development
