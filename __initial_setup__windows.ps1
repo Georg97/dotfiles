@@ -40,6 +40,7 @@ scoop install `
     main/terragrunt `
     extras/audacity `
     extras/insomnia `
+    extras/lazydocker `
     extras/lazygit `
     extras/komorebi `
     extras/whkd `
