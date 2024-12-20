@@ -9,9 +9,9 @@
   "border_width": 2,
   "border_offset": 0,
   "border_colours": {
-    "single": "#ff3399",
+    "single": "#6d4aff",
     "stack": "#00a542",
-    "monocle": "#ff3399",
+    "monocle": "#6d4aff",
     "unfocused": "#808080"
   },
   "stackbar": {

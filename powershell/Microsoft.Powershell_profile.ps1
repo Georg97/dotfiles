@@ -47,7 +47,7 @@ if (Test-Path($ChocolateyProfile)) {
 
 # new powershell version path
 #$pwsh_executable = 'C:\Program Files\PowerShell\7\pwsh.exe'
-#if (Test-Path -Path $pwsh_executable) {
+#if (Test-Path -Path $pwsh_executable) {https://teams.live.com/l/invite/FEABfjCrx-coLP2yQI
 #    $pwsh_executable
 #}
 
@@ -58,7 +58,7 @@ if (Test-Path($ChocolateyProfile)) {
 #cd $HOME\development
 
 function StartSolarsyncWorking {
-   wt -w 0 split-pane -V -d "$HOME\development\sunbound\solarsync" k9s; 
+   wt -w 0 split-pane -V -d "$HOME\development\sunbound\solarsync"; k9s; 
    wt -w 0 split-pane -H -d "$HOME\development\sunbound\solarsync"; 
    wt -w 0 focus-pane -t 0; 
    wt -w 0 split-pane -H -d "$HOME\development\sunbound\solarsync"; 
