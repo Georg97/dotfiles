@@ -58,8 +58,8 @@ if (Test-Path($ChocolateyProfile)) {
 #cd $HOME\development
 
 function StartSolarsyncWorking {
-   wt -w 0 split-pane -V -d "$HOME\development\sunbound\solarsync"; k9s; 
-   wt -w 0 split-pane -H -d "$HOME\development\sunbound\solarsync"; 
+   wt -w 0 split-pane -V -d "$HOME\development\sunbound\solarsync" k9s;
+   wt -w 0 split-pane -H -d "$HOME\development\sunbound\solarsync";
    wt -w 0 focus-pane -t 0; 
    wt -w 0 split-pane -H -d "$HOME\development\sunbound\solarsync"; 
    wt -w 0 focus-pane -t 0;
