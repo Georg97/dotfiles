@@ -6,8 +6,15 @@ Komorebic(cmd) {
     RunWait(format("komorebic.exe {}", cmd), , "Hide")
 }
 
+ReloadKomorebic() {
+    RunWait(format("komorebic.exe stop"), , "Hide")
+    RunWait(format("komorebic.exe start"), , "Hide")
+}
+
 <#q::Komorebic("close")
 !m::Komorebic("minimize")
+^+k::ReloadKomorebic()
+^+r::Komorebic("retile")
 
 ; Focus windows
 !h::Komorebic("focus left")
