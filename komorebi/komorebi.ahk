@@ -1,5 +1,10 @@
 #Requires AutoHotkey v2.0.2
 
+# ! = alt
+# + = shift
+# ^ = ctrl
+# # = win
+
 #SingleInstance Force
 
 Komorebic(cmd) {
