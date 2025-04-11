@@ -66,3 +66,23 @@ function StartSolarsyncWorking {
    cd "$HOME\development\sunbound\solarsync"; lgit;
 }
 Set-Alias sswork StartSolarsyncWorking
+
+function StartSunCalendarWorking {
+   wt -w 0 split-pane -V -d "$HOME\development\gitea\SunCalendar";
+   wt -w 0 split-pane -H -d "$HOME\development\gitea\SunCalendar";
+   wt -w 0 focus-pane -t 0; 
+   wt -w 0 split-pane -H -d "$HOME\development\gitea\SunCalendar"; 
+   wt -w 0 focus-pane -t 0;
+   cd "$HOME\development\gitea\SunCalendar"; lgit;
+}
+Set-Alias scwork StartSunCalendarWorking
+
+function StartMonoWorking {
+   wt -w 0 split-pane -V -d "$HOME\development\sunbound\mono";
+   wt -w 0 split-pane -H -d "$HOME\development\sunbound\mono";
+   wt -w 0 focus-pane -t 0; 
+   wt -w 0 split-pane -H -d "$HOME\development\sunbound\mono"; 
+   wt -w 0 focus-pane -t 0;
+   cd "$HOME\development\sunbound\mono"; lgit;
+}
+Set-Alias monowork StartMonoWorking

@@ -7,3 +7,5 @@
     defaultBranch = main
 [pull]
     rebase = true
+[credential "http://192.168.178.194:3000"]
+	provider = generic

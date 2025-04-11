@@ -4,6 +4,18 @@
     "actions": 
     [
         {
+            "command": "find",
+            "id": "User.find"
+        },
+        {
+            "command": 
+            {
+                "action": "resizePane",
+                "direction": "left"
+            },
+            "id": "User.resizePane.2A0DA8E0"
+        },
+        {
             "command": 
             {
                 "action": "moveFocus",
@@ -14,29 +26,30 @@
         {
             "command": 
             {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "id": "User.splitPane.A6751878"
+        },
+        {
+            "command": 
+            {
                 "action": "moveFocus",
                 "direction": "down"
             },
-            "id": "User.moveFocus.F747588A",
-            "keys": "ctrl+alt+down"
+            "id": "User.moveFocus.F747588A"
         },
         {
             "command": 
             {
                 "action": "newTab"
             },
-            "id": "User.newTab.5DEADB41",
-            "keys": "ctrl+shift+t"
+            "id": "User.newTab.5DEADB41"
         },
         {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
-            },
-            "id": "User.splitPane.A6751878",
-            "keys": "alt+shift+d"
+            "command": "paste",
+            "id": "User.paste"
         },
         {
             "command": 
@@ -44,40 +57,11 @@
                 "action": "copy",
                 "singleLine": false
             },
-            "id": "User.copy.644BA8F2",
-            "keys": "ctrl+shift+c"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+w"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+t"
-        },
-        {
-            "command": "paste",
-            "id": "User.paste",
-            "keys": "ctrl+shift+v"
-        },
-        {
-            "command": 
-            {
-                "action": "resizePane",
-                "direction": "left"
-            },
-            "id": "User.resizePane.2A0DA8E0",
-            "keys": "alt+shift+left"
-        },
-        {
-            "command": "find",
-            "id": "User.find",
-            "keys": "ctrl+shift+f"
+            "id": "User.copy.644BA8F2"
         },
         {
             "command": "closePane",
-            "id": "User.closePane",
-            "keys": "ctrl+shift+w"
+            "id": "User.closePane"
         },
         {
             "command": 
@@ -85,8 +69,7 @@
                 "action": "moveFocus",
                 "direction": "left"
             },
-            "id": "User.moveFocus.2A0DA8E0",
-            "keys": "ctrl+alt+left"
+            "id": "User.moveFocus.2A0DA8E0"
         },
         {
             "command": 
@@ -100,10 +83,17 @@
             "command": 
             {
                 "action": "moveFocus",
+                "direction": "previous"
+            },
+            "id": "User.moveFocus.75247157"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
                 "direction": "right"
             },
-            "id": "User.moveFocus.87C324ED",
-            "keys": "ctrl+alt+right"
+            "id": "User.moveFocus.87C324ED"
         },
         {
             "command": 
@@ -111,16 +101,7 @@
                 "action": "moveFocus",
                 "direction": "up"
             },
-            "id": "User.moveFocus.6CD791B",
-            "keys": "ctrl+alt+up"
-        },
-        {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "previous"
-            },
-            "id": "User.moveFocus.75247157"
+            "id": "User.moveFocus.6CD791B"
         },
         {
             "command": 
@@ -152,8 +133,7 @@
                 "action": "resizePane",
                 "direction": "down"
             },
-            "id": "User.resizePane.F747588A",
-            "keys": "alt+shift+down"
+            "id": "User.resizePane.F747588A"
         },
         {
             "command": 
@@ -161,8 +141,7 @@
                 "action": "resizePane",
                 "direction": "right"
             },
-            "id": "User.resizePane.87C324ED",
-            "keys": "alt+shift+right"
+            "id": "User.resizePane.87C324ED"
         },
         {
             "command": 
@@ -170,13 +149,79 @@
                 "action": "resizePane",
                 "direction": "up"
             },
-            "id": "User.resizePane.6CD791B",
-            "keys": "alt+shift+up"
+            "id": "User.resizePane.6CD791B"
         }
     ],
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{9fd33ffb-3e8f-41ba-90f6-f218f00b87d4}",
+    "keybindings": 
+    [
+        {
+            "id": "User.moveFocus.F747588A",
+            "keys": "ctrl+alt+down"
+        },
+        {
+            "id": "User.newTab.5DEADB41",
+            "keys": "ctrl+shift+t"
+        },
+        {
+            "id": "User.splitPane.A6751878",
+            "keys": "alt+shift+d"
+        },
+        {
+            "id": "User.moveFocus.2A0DA8E0",
+            "keys": "ctrl+alt+left"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+w"
+        },
+        {
+            "id": "User.resizePane.87C324ED",
+            "keys": "alt+shift+right"
+        },
+        {
+            "id": "User.copy.644BA8F2",
+            "keys": "ctrl+shift+c"
+        },
+        {
+            "id": "User.paste",
+            "keys": "ctrl+shift+v"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+t"
+        },
+        {
+            "id": "User.resizePane.2A0DA8E0",
+            "keys": "alt+shift+left"
+        },
+        {
+            "id": "User.find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "id": "User.closePane",
+            "keys": "ctrl+shift+w"
+        },
+        {
+            "id": "User.moveFocus.87C324ED",
+            "keys": "ctrl+alt+right"
+        },
+        {
+            "id": "User.moveFocus.6CD791B",
+            "keys": "ctrl+alt+up"
+        },
+        {
+            "id": "User.resizePane.F747588A",
+            "keys": "alt+shift+down"
+        },
+        {
+            "id": "User.resizePane.6CD791B",
+            "keys": "alt+shift+up"
+        }
+    ],
     "newTabMenu": 
     [
         {

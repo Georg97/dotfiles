@@ -1,9 +1,9 @@
 #Requires AutoHotkey v2.0.2
 
-# ! = alt
-# + = shift
-# ^ = ctrl
-# # = win
+; ! = alt
+; + = shift
+; ^ = ctrl
+; # = win
 
 #SingleInstance Force
 
@@ -72,6 +72,8 @@ ReloadKomorebic() {
 !6::Komorebic("focus-workspace 5")
 !7::Komorebic("focus-workspace 6")
 !8::Komorebic("focus-workspace 7")
+!9::Komorebic("focus-workspace 8")
+!0::Komorebic("focus-workspace 9")
 
 ; Move windows across workspaces
 !+1::Komorebic("move-to-workspace 0")
