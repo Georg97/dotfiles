@@ -7,8 +7,6 @@
 # - imagmagick
 # - winscp
 # - discord
-# - upnote
-# - proton vpn
 
 # [optional]
 # - gimp
@@ -18,9 +16,13 @@
 winget install `
     Microsoft.PowerToys `
     Microsoft.Powershell `
-    OpenWhisperSystems.Signal `
     Brave.Brave `
+    Obsidian.Obsidian `
+    OpenWhisperSystems.Signal `
     Nextcloud.NextcloudDesktop `
+    Proton.ProtonVPN `
+    Proton.ProtonMail `
+    Proton.ProtonDrive `
     --source winget
 
 # also think about:
@@ -43,19 +45,16 @@ scoop install `
     main/terragrunt `
     extras/audacity `
     extras/insomnia `
-    extras/lazydocker `
     extras/lazygit `
     extras/komorebi `
     extras/whkd `
     extras/autohotkey `
 
-git clone https://github.com/Georg97/dotfiles $HOME\.dotfiles
-cd $HOME\.dotfiles
-powershell .\init.ps1
+# git clone https://github.com/Georg97/dotfiles $HOME\.dotfiles
+# cd $HOME\.dotfiles
+# powershell .\init.ps1
 
 # ------------------ [POSTINSTALL] ------------------
 # - add git bin folder to path
 # - add vscode profiles
-
-# afterthought
-# - helix editor
+#
