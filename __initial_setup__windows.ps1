@@ -13,6 +13,27 @@
 # - inkscape
 # - vncviewer
 
+# Requires: PowerShell 5+ (or 7+)
+# Purpose: Ensure required commands are available before continuing.
+
+$ErrorActionPreference = 'Stop'
+
+$required = @('scoop', 'winget', 'git')
+$missing = @()
+
+foreach ($cmd in $required) {
+  if (-not (Get-Command $cmd -ErrorAction SilentlyContinue)) {
+    $missing += $cmd
+  }
+}
+
+if ($missing.Count -gt 0) {
+  Write-Error ("Missing required command(s): {0}. Please install them and re-run the script." -f ($missing -join ', '))
+  exit 1
+}
+
+# All checks passed; continue script below.
+
 winget install `
     Microsoft.PowerToys `
     Microsoft.Powershell `
