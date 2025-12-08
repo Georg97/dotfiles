@@ -23,6 +23,9 @@ winget install `
     Nextcloud.NextcloudDesktop `
     --source winget
 
+# also think about:
+#   Erlang.ErlangOTP `
+
 scoop bucket add extras
 scoop install `
     main/ffmpeg `

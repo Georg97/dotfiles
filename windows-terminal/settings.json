@@ -4,10 +4,6 @@
     "actions": 
     [
         {
-            "command": "find",
-            "id": "User.find"
-        },
-        {
             "command": 
             {
                 "action": "resizePane",
@@ -19,9 +15,9 @@
             "command": 
             {
                 "action": "moveFocus",
-                "direction": "first"
+                "direction": "down"
             },
-            "id": "User.moveFocus.ED268D78"
+            "id": "User.moveFocus.F747588A"
         },
         {
             "command": 
@@ -36,9 +32,17 @@
             "command": 
             {
                 "action": "moveFocus",
-                "direction": "down"
+                "direction": "first"
             },
-            "id": "User.moveFocus.F747588A"
+            "id": "User.moveFocus.ED268D78"
+        },
+        {
+            "command": "find",
+            "id": "User.find"
+        },
+        {
+            "command": "paste",
+            "id": "User.paste"
         },
         {
             "command": 
@@ -46,10 +50,6 @@
                 "action": "newTab"
             },
             "id": "User.newTab.5DEADB41"
-        },
-        {
-            "command": "paste",
-            "id": "User.paste"
         },
         {
             "command": 
@@ -62,6 +62,14 @@
         {
             "command": "closePane",
             "id": "User.closePane"
+        },
+        {
+            "command": 
+            {
+                "action": "resizePane",
+                "direction": "down"
+            },
+            "id": "User.resizePane.F747588A"
         },
         {
             "command": 
@@ -131,14 +139,6 @@
             "command": 
             {
                 "action": "resizePane",
-                "direction": "down"
-            },
-            "id": "User.resizePane.F747588A"
-        },
-        {
-            "command": 
-            {
-                "action": "resizePane",
                 "direction": "right"
             },
             "id": "User.resizePane.87C324ED"
@@ -170,20 +170,20 @@
             "keys": "alt+shift+d"
         },
         {
-            "id": "User.moveFocus.2A0DA8E0",
-            "keys": "ctrl+alt+left"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+w"
+            "id": "User.copy.644BA8F2",
+            "keys": "ctrl+shift+c"
         },
         {
             "id": "User.resizePane.87C324ED",
             "keys": "alt+shift+right"
         },
         {
-            "id": "User.copy.644BA8F2",
-            "keys": "ctrl+shift+c"
+            "id": null,
+            "keys": "ctrl+w"
+        },
+        {
+            "id": "User.moveFocus.2A0DA8E0",
+            "keys": "ctrl+alt+left"
         },
         {
             "id": "User.paste",
@@ -222,6 +222,7 @@
             "keys": "alt+shift+up"
         }
     ],
+    "launchMode": "maximized",
     "newTabMenu": 
     [
         {
@@ -322,6 +323,7 @@
             "yellow": "#A2734C"
         }
     ],
+    "theme": "system",
     "themes": [],
     "useAcrylicInTabRow": true
 }

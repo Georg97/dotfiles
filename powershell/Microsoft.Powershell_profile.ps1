@@ -1,13 +1,5 @@
-function ConfigureNeoVim {
-    Set-Location $HOME\AppData\Local\nvim
-    nvim .
-}
-function ConfigurePowerShell {
-    Set-Location $HOME\Documents\WindowsPowerShell
-    nvim .
-}
-function ConfigureWindowsTerminal {
-    Set-Location $HOME\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
+function ConfigureDotfiles {
+    Set-Location $HOME\.dotfiles
     nvim .
 }
 function GitLogOneline {
@@ -19,9 +11,9 @@ function GitLog {
 function RestartKomorebi {
     komorebic stop; komorebic start
 }
-Set-Alias vimc ConfigureNeoVim
-Set-Alias pwshc ConfigurePowerShell
-Set-Alias termc ConfigureWindowsTerminal
+
+Set-Alias confd ConfigureDotfiles
+Set-Alias which Get-Command
 Set-Alias gitll GitLogOneline
 Set-Alias gitl GitLog
 Set-Alias lgit lazygit
@@ -32,7 +24,7 @@ Set-Alias restart-komorebic RestartKomorebi
 
 # $Env:KOMOREBI_CONFIG_HOME = 'C:\Users\g.hirsch\.config\komorebi'
 $env:KUBE_EDITOR="nvim"
-$env:KUBECONFIG = "$HOME\.kube\config;$HOME\.kube\sunbound-dev.conf"
+$env:KUBECONFIG = "$HOME\.kube\config;$HOME\.kube\sunbound-dev.conf;$HOME\.kube\sunbound-prod.conf"
 $Env:KOMOREBI_CONFIG_HOME="$HOME\.config\komorebi"
 
 # Import the Chocolatey Profile that contains the necessary code to enable
@@ -57,16 +49,26 @@ if (Test-Path($ChocolateyProfile)) {
 #}
 #cd $HOME\development
 
-function StartSolarsyncWorking {
-   wt -w 0 split-pane -V -d "$HOME\development\sunbound\solarsync";
-   wt -w 0 split-pane -H -d "$HOME\development\sunbound\solarsync";
-   wt -w 0 focus-pane -t 0; 
-   wt -w 0 split-pane -H -d "$HOME\development\sunbound\solarsync"; 
-   wt -w 0 focus-pane -t 0;
-   cd "$HOME\development\sunbound\solarsync"; lgit;
-}
-Set-Alias sswork StartSolarsyncWorking
 
+# ----------------------------------------------------------------------------------------------- #
+# | ==================================== Workspace Setups ===================================== | #
+# ----------------------------------------------------------------------------------------------- #
+function StartSolarsyncWorking {
+   wt -w 0 split-pane -V -d "$HOME\development\sunbound\mono\product\solarsync";
+   wt -w 0 split-pane -H -d "$HOME\development\sunbound\mono\product\solarsync";
+   wt -w 0 focus-pane -t 0; 
+   wt -w 0 split-pane -H -d "$HOME\development\sunbound\mono\product\solarsync"; 
+   wt -w 0 focus-pane -t 0;
+   cd "$HOME\development\sunbound\mono\product\solarsync"; lgit;
+}
+function StartSolerpWorking {
+   wt -w 0 split-pane -V -d "$HOME\development\sunbound\mono\product\solerp";
+   wt -w 0 split-pane -H -d "$HOME\development\sunbound\mono\product\solerp";
+   wt -w 0 focus-pane -t 0; 
+   wt -w 0 split-pane -H -d "$HOME\development\sunbound\mono\product\solerp"; 
+   wt -w 0 focus-pane -t 0;
+   cd "$HOME\development\sunbound\mono\product\solerp"; lgit;
+}
 function StartSunCalendarWorking {
    wt -w 0 split-pane -V -d "$HOME\development\gitea\SunCalendar";
    wt -w 0 split-pane -H -d "$HOME\development\gitea\SunCalendar";
@@ -75,14 +77,74 @@ function StartSunCalendarWorking {
    wt -w 0 focus-pane -t 0;
    cd "$HOME\development\gitea\SunCalendar"; lgit;
 }
-Set-Alias scwork StartSunCalendarWorking
-
 function StartMonoWorking {
-   wt -w 0 split-pane -V -d "$HOME\development\sunbound\mono";
-   wt -w 0 split-pane -H -d "$HOME\development\sunbound\mono";
+   wt -w 0 split-pane -V -d "$HOME\development\sunbound\mono" make solerp-configapi-local-run;
+   Start-Sleep -Seconds 2
+   wt -w 0 split-pane -H -d "$HOME\development\sunbound\mono" make solerp-gql-local-run;
    wt -w 0 focus-pane -t 0; 
-   wt -w 0 split-pane -H -d "$HOME\development\sunbound\mono"; 
+   wt -w 0 split-pane -H -d "$HOME\development\sunbound\mono"; make solerp-frontend-local
    wt -w 0 focus-pane -t 0;
    cd "$HOME\development\sunbound\mono"; lgit;
 }
+Set-Alias sswork StartSolarsyncWorking
+Set-Alias sework StartSolerpWorking
+Set-Alias scwork StartSunCalendarWorking
 Set-Alias monowork StartMonoWorking
+
+# ----------------------------------------------------------------------------------------------- #
+# | ==================================== Directory Setups ===================================== | #
+# ----------------------------------------------------------------------------------------------- #
+function GoToMono {
+    cd "$HOME\development\sunbound\mono";
+}
+function GoToMonoVibe {
+    cd "$HOME\development\sunbound\mono - vibe";
+}
+
+function GoToMegan {
+    cd "$HOME\development\sunbound\mono\product\megan";
+}
+function GoToMeganDb {
+    cd "$HOME\development\sunbound\mono\product\megan\database";
+}
+function GoToMeganBackend {
+    cd "$HOME\development\sunbound\mono\product\megan\backend";
+}
+
+function GoToLora {
+    cd "$HOME\development\sunbound\mono\product\lora";
+}
+function GoToLoraDb {
+    cd "$HOME\development\sunbound\mono\product\lora\database";
+}
+function GoToLoraBackend {
+    cd "$HOME\development\sunbound\mono\product\lora\backend";
+}
+
+function GoToSolarsync {
+    cd "$HOME\development\sunbound\mono\product\solarsync";
+}
+function GoToSolarsyncDb {
+    cd "$HOME\development\sunbound\mono\product\solarsync\database";
+}
+function GoToSolarsyncBackend {
+    cd "$HOME\development\sunbound\mono\product\solarsync\backend";
+}
+Set-Alias mono GoToMono
+Set-Alias monovibe GoToMonoVibe
+
+Set-Alias megan GoToMegan
+Set-Alias meganbe GoToMeganBackend
+Set-Alias megandb GoToMeganDb
+
+Set-Alias solarsync GoToSolarsync
+Set-Alias ssyncbe GoToSolarsyncDb
+Set-Alias ssyncdb GoToSolarsyncBackend
+
+Set-Alias lora GoToLora
+Set-Alias lorabe GoToLoraBackend
+Set-Alias loradb GoToLoraDb
+
+function grep($str) {
+    Select-String -Pattern $str
+}

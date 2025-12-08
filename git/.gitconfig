@@ -9,3 +9,5 @@
     rebase = true
 [credential "http://192.168.178.194:3000"]
 	provider = generic
+[credential "http://192.168.178.2:3000"]
+	provider = generic
