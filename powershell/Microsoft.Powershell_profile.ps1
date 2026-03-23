@@ -11,6 +11,30 @@ function GitLog {
 function RestartKomorebi {
     komorebic stop; komorebic start
 }
+  function killport {
+      param(
+          [Parameter(Mandatory)][int]$Port
+      )
+
+      $connections = Get-NetTCPConnection -LocalPort $Port -ErrorAction SilentlyContinue
+
+      if (-not $connections) {
+          Write-Host "No process found listening on port $Port." -ForegroundColor Yellow
+          return
+      }
+
+      $processId = ($connections | Select-Object -First 1).OwningProcess
+      $process = Get-Process -Id $processId -ErrorAction SilentlyContinue
+
+      if (-not $process) {
+          Write-Host "Process $processId owns port $Port but is no longer running." -ForegroundColor Yellow
+          return
+      }
+
+      Write-Host "Port $Port is used by process $($process.ProcessName) (PID: $processId)." -ForegroundColor Cyan
+      Stop-Process -Id $processId -Force
+      Write-Host "Killed $($process.ProcessName) (PID: $processId)." -ForegroundColor Green
+  }
 
 Set-Alias confd ConfigureDotfiles
 Set-Alias which Get-Command
@@ -104,11 +128,9 @@ function GoToMonoVibe {
 function GoToMegan {
     cd "$HOME\development\sunbound\mono\product\megan";
 }
-function GoToMeganDb {
-    cd "$HOME\development\sunbound\mono\product\megan\database";
-}
-function GoToMeganBackend {
-    cd "$HOME\development\sunbound\mono\product\megan\backend";
+
+function GoToI18nify {
+    cd "$HOME\development\sunbound\mono\shared\service\i18ify";
 }
 
 function GoToLora {
@@ -121,30 +143,28 @@ function GoToLoraBackend {
     cd "$HOME\development\sunbound\mono\product\lora\backend";
 }
 
-function GoToSolarsync {
-    cd "$HOME\development\sunbound\mono\product\solarsync";
-}
-function GoToSolarsyncDb {
-    cd "$HOME\development\sunbound\mono\product\solarsync\database";
-}
-function GoToSolarsyncBackend {
-    cd "$HOME\development\sunbound\mono\product\solarsync\backend";
+
+function GoToSynapse {
+    cd "$HOME\development\gitea\Synapse";
 }
 Set-Alias mono GoToMono
 Set-Alias monovibe GoToMonoVibe
 
 Set-Alias megan GoToMegan
-Set-Alias meganbe GoToMeganBackend
-Set-Alias megandb GoToMeganDb
-
-Set-Alias solarsync GoToSolarsync
-Set-Alias ssyncbe GoToSolarsyncDb
-Set-Alias ssyncdb GoToSolarsyncBackend
+Set-Alias i18nify GoToI18nify
 
 Set-Alias lora GoToLora
 Set-Alias lorabe GoToLoraBackend
 Set-Alias loradb GoToLoraDb
 
+Set-Alias synapse GoToSynapse
+
 function grep($str) {
     Select-String -Pattern $str
 }
+
+function GoToStartup($str) {
+    cd "$HOME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup";
+}
+Set-Alias startup GoToStartup
+

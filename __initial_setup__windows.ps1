@@ -7,6 +7,9 @@
 # - imagmagick
 # - winscp
 # - discord
+# - bibisco (über lemonsqueezy: https://app.lemonsqueezy.com/my-orders/login)
+# - chillicream nitro
+# - outlook (PWA)
 
 # [optional]
 # - gimp
