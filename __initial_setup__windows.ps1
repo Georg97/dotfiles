@@ -47,7 +47,7 @@ winget install `
     Proton.ProtonVPN `
     Proton.ProtonMail `
     Proton.ProtonDrive `
-    TheDocumentFoundation.LibreOffice `
+    ONLYOFFICE.DesktopEditors `
     --source winget
 
 # also think about:
